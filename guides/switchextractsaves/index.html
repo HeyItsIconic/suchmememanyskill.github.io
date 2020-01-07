@@ -11,7 +11,7 @@
     <link rel="../../img/favicon.ico">
 
     
-    <title>General Theme Sites - Such Meme, Many Skill's Dumping Ground</title>
+    <title>SysMMC save extract - Such Meme, Many Skill's Dumping Ground</title>
     
 
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -93,7 +93,7 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Guides <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
@@ -110,31 +110,31 @@
         
             
 <li >
-    <a href="../../guides/nandrestore/">Switch Nand Restore Guide</a>
+    <a href="../nandrestore/">Switch Nand Restore Guide</a>
 </li>
 
         
             
 <li >
-    <a href="../../guides/autorcm/">Installing AutoRCM</a>
+    <a href="../autorcm/">Installing AutoRCM</a>
 </li>
 
         
             
 <li >
-    <a href="../../guides/switchserials/">Switch Hackable Serial List</a>
+    <a href="../switchserials/">Switch Hackable Serial List</a>
 </li>
 
         
             
 <li >
-    <a href="../../guides/emunand/">Emummc manual Guide</a>
+    <a href="../emunand/">Emummc manual Guide</a>
 </li>
 
         
             
 <li >
-    <a href="../../guides/emunand_linux/">Emummc manual linux Guide</a>
+    <a href="../emunand_linux/">Emummc manual linux Guide</a>
 </li>
 
         
@@ -144,13 +144,13 @@
                         
                             
 <li >
-    <a href="../../guides/switchdumpguide/">Switch Dump & Installing Guide</a>
+    <a href="../switchdumpguide/">Switch Dump & Installing Guide</a>
 </li>
 
                         
                             
-<li >
-    <a href="../../guides/switchextractsaves/">SysMMC save extract</a>
+<li class="active">
+    <a href="./">SysMMC save extract</a>
 </li>
 
                         
@@ -201,25 +201,25 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Themes <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
-<li class="active">
-    <a href="./">General Theme Sites</a>
+<li >
+    <a href="../../Themes/General_Theme_Sites/">General Theme Sites</a>
 </li>
 
                         
                             
 <li >
-    <a href="../3ds_Themes/">My 3ds Themes</a>
+    <a href="../../Themes/3ds_Themes/">My 3ds Themes</a>
 </li>
 
                         
                             
 <li >
-    <a href="../Switch_Themes/">My Switch Themes</a>
+    <a href="../../Themes/Switch_Themes/">My Switch Themes</a>
 </li>
 
                         
@@ -242,12 +242,12 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../../apps/TegraExplorer/">
+                        <a rel="prev" href="../switchdumpguide/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../3ds_Themes/">
+                        <a rel="next" href="../../apps/themebatscript/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -261,16 +261,50 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#switch">Switch</a></li>
-        <li class="first-level "><a href="#3ds">3ds</a></li>
+        <li class="first-level active"><a href="#extract-your-sysmmc-saves-via-rcm">Extract your SysMMC saves via RCM</a></li>
+            <li class="second-level"><a href="#step-1-getting-the-saves">Step 1: Getting the saves</a></li>
+                
+                <li class="third-level"><a href="#what-you-need">What you need:</a></li>
+                <li class="third-level"><a href="#instructions">Instructions:</a></li>
+            <li class="second-level"><a href="#step-2-extracting-the-saves">Step 2: Extracting the saves</a></li>
+                
+                <li class="third-level"><a href="#what-you-need_1">What you need:</a></li>
+                <li class="third-level"><a href="#instructions_1">Instructions:</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h2 id="switch">Switch</h2>
-<p>A good place to find user created themes for the switch is the <a href="https://www.reddit.com/r/NXThemes/">NxTheme Subreddit</a> or the <a href="https://www.switchbru.com/appstore/#/category/themes">hbappstore</a>.</p>
-<h2 id="3ds">3ds</h2>
-<p>A good place to find user created themes for the 3ds is the <a href="https://themeplaza.eu/themes?sort=most-downloaded">Themeplaza Site</a>.</p></div>
+<h1 id="extract-your-sysmmc-saves-via-rcm">Extract your SysMMC saves via RCM</h1>
+<h2 id="step-1-getting-the-saves">Step 1: Getting the saves</h2>
+<h3 id="what-you-need">What you need:</h3>
+<ul>
+<li>The latest release of <a href="https://github.com/suchmememanyskill/TegraExplorer/releases">TegraExplorer</a></li>
+<li>A payload injector (Example: <a href="https://github.com/eliboa/TegraRcmGUI/releases">TegraRcmGui</a>)</li>
+</ul>
+<h3 id="instructions">Instructions:</h3>
+<ol>
+<li>Launch TegraExplorer via your chosen payload injector</li>
+<li>Navigate to <code>Tools</code>, and select <code>Dump User Saves</code>. This will take a while. Press any button to continue when it's done</li>
+<li>Navigate to <code>Unmount SD</code> and select it. Pull your sd card out of your switch and put it into your pc</li>
+</ol>
+<h2 id="step-2-extracting-the-saves">Step 2: Extracting the saves</h2>
+<p>These saves aren't done yet! these are still encrypted.</p>
+<h3 id="what-you-need_1">What you need:</h3>
+<ul>
+<li>Your prod.keys file (Extracted by <a href="https://github.com/shchmue/Lockpick_RCM">Lockpick_RCM</a>)</li>
+<li>Python 3.6+ (Install with <code>Add to Path</code> checked otherwise this will fail! Download <a href="https://www.python.org/downloads/">python</a> here)</li>
+<li>the <a href="https://github.com/Thealexbarney/LibHac/releases">HactoolNet</a>-win.zip release</li>
+<li>Your <code>save</code> folder acquired from Step 1</li>
+<li><a href="../Img/SaveExtract.zip">SaveExtract</a></li>
+</ul>
+<h3 id="instructions_1">Instructions:</h3>
+<ol>
+<li>Extract the <code>SaveExtract</code> folder out of the SaveExtract.zip to somewhere on your pc</li>
+<li>Place your <code>prod.keys</code> and <code>HacToolNet.exe</code> (extracted from it's zip) in the <code>SaveExtract</code> folder</li>
+<li>Place your <code>save</code> folder from your sd card (SD:/tegraexplorer/save) in the <code>SaveExtract</code> folder</li>
+<li>Double click <code>run.bat</code> to start the save extraction. Your saves should be located now in the <code>out</code> folder, ordered by titleid</li>
+</ol>
+<p>(Optional: Put your sd card back into your switch, select <code>Mount SD</code>, go to <code>Exit</code>, and hit either <code>Reboot to Hekate</code> or <code>Reboot to Atmosphere</code>)</p></div>
         
         
     </div>

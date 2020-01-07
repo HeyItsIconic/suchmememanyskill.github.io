@@ -98,44 +98,59 @@
                         <ul class="dropdown-menu">
                         
                             
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Old</a>
+    <ul class="dropdown-menu">
+        
+            
 <li >
     <a href="https://nh-server.github.io/switch-guide/extras/theming/">Switch Theming Guide (external site)</a>
 </li>
 
-                        
-                            
+        
+            
 <li >
     <a href="../nandrestore/">Switch Nand Restore Guide</a>
 </li>
 
-                        
-                            
+        
+            
 <li >
     <a href="../autorcm/">Installing AutoRCM</a>
 </li>
 
-                        
-                            
+        
+            
 <li >
     <a href="../switchserials/">Switch Hackable Serial List</a>
 </li>
 
-                        
-                            
+        
+            
 <li >
     <a href="../emunand/">Emummc manual Guide</a>
 </li>
 
-                        
-                            
+        
+            
 <li >
     <a href="../emunand_linux/">Emummc manual linux Guide</a>
 </li>
+
+        
+    </ul>
+  </li>
 
                         
                             
 <li class="active">
     <a href="./">Switch Dump & Installing Guide</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../switchextractsaves/">SysMMC save extract</a>
 </li>
 
                         
@@ -149,9 +164,24 @@
                         <ul class="dropdown-menu">
                         
                             
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Old</a>
+    <ul class="dropdown-menu">
+        
+            
 <li >
     <a href="../../apps/themebatscript/">Switch Theme Bat Script</a>
 </li>
+
+        
+            
+<li >
+    <a href="../../apps/CubeAdventure/">CubeAdventure - Game by me</a>
+</li>
+
+        
+    </ul>
+  </li>
 
                         
                             
@@ -162,7 +192,7 @@
                         
                             
 <li >
-    <a href="../../apps/CubeAdventure/">CubeAdventure - Game by me</a>
+    <a href="../../apps/TegraExplorer/">TegraExplorer</a>
 </li>
 
                         
@@ -217,7 +247,7 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../../apps/themebatscript/">
+                        <a rel="next" href="../switchextractsaves/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -238,7 +268,8 @@
                 <li class="third-level"><a href="#instructions">Instructions</a></li>
             <li class="second-level"><a href="#step-2-the-dump">Step 2: The Dump</a></li>
                 
-                <li class="third-level"><a href="#instructions_1">Instructions</a></li>
+                <li class="third-level"><a href="#instructions-cart-based-dump">Instructions (Cart based dump)</a></li>
+                <li class="third-level"><a href="#instructions-digital-based-dump">Instructions (Digital based dump)</a></li>
             <li class="second-level"><a href="#step-3-the-install">Step 3: The Install</a></li>
                 
     </ul>
@@ -246,7 +277,7 @@
         <div class="col-md-9" role="main">
 
 <h1 id="switch-dump-and-install-guide">Switch Dump and Install Guide</h1>
-<p>This guide has been made and tested using goldleaf 0.7.3 and nxdumptool 1.1.7</p>
+<p>This guide has been made and tested using goldleaf 0.8.0 and nxdumptool 1.1.8</p>
 <div class="admonition danger">
 <p class="admonition-title">Ban risk</p>
 <p>Installing any sort of nsp's gets you banned as soon as you connect to Nintendo services. AFTER INSTALLING ANY NSP, KEEP YOUR SYSTEM PERMANENTLY OFFLINE!</p>
@@ -265,7 +296,7 @@
 </div>
 <h2 id="step-1-preparations">Step 1: Preparations</h2>
 <p>This bit will get you the required files and programs for installing cart dumps</p>
-<h4 id="what-you-need">What you need</h4>
+<h3 id="what-you-need">What you need</h3>
 <ul>
 <li><a href="https://github.com/XorTroll/Goldleaf/releases">The .nro version of GoldLeaf</a></li>
 <li><a href="https://github.com/DarkMatterCore/nxdumptool/releases">The .nro version of NXDumpTool</a></li>
@@ -287,7 +318,7 @@
 </ol>
 <h2 id="step-2-the-dump">Step 2: The Dump</h2>
 <p><img alt="NXDUMP1" src="../Img/Main_NXDUMP.png" /></p>
-<h3 id="instructions_1">Instructions</h3>
+<h3 id="instructions-cart-based-dump">Instructions (Cart based dump)</h3>
 <ol>
 <li>Open the Homebrew Menu and open nxdumptool</li>
 <li>Select <code>Dump gamecard content</code>, then <code>Nintendo Submission Package (NSP) dump</code><ul>
@@ -304,6 +335,16 @@
 </li>
 <li>When done, press any button to return to the last menu, press b a bunch more to return to the main dump menu. If your cartridge also contains a game update refollow step 2 to 4 again but instead dump the game update.</li>
 <li>Press + to exit to the hbmenu</li>
+</ol>
+<h3 id="instructions-digital-based-dump">Instructions (Digital based dump)</h3>
+<ol>
+<li>Launch into Sys CFW via hekate (or if the game you want to dump is on EmuMMC, launch EmuMMC cfw)</li>
+<li>Open the Homebrew Menu and open nxdumptool</li>
+<li>Select <code>Dump installed SD card / eMMC content</code>, then select the game you want to dump, then select <code>Nintendo Submission Package (NSP) dump</code></li>
+<li>Select <code>Dump base application NSP</code> (Redo  section if there's also an update to dump)</li>
+<li>Turn the following options on: <code>Split output dump (FAT32 support)</code>, <code>Remove console specific data</code>, <code>Generate ticket-less dump</code> and <code>Change NPDM RSA key/sig in Program NCA</code>.</li>
+<li>Select <code>Start NSP dump process</code></li>
+<li>After this is done, either dump your game update too, or return to the homebrew menu by pressing + (Don't forget to reboot into EmuMMC!!)</li>
 </ol>
 <p>Your game dump got dumped in the /nxdumptool/nsp folder</p>
 <h2 id="step-3-the-install">Step 3: The Install</h2>
