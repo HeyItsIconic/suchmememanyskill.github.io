@@ -295,7 +295,7 @@
 <li><a href="#early-boot-errors">My switch seemingly does nothing when i try to boot it up normally</a></li>
 <li><a href="#mid-boot-errors">My switch shows the Nintendo/blackwhite atmosphere logo, then blackscreens</a></li>
 <li><a href="#late-boot-errors">My switch gets stuck at the Switch logo</a></li>
-<li><a href="#boot-Crashes">My switch crashes on boot</a></li>
+<li><a href="#boot-crashes">My switch crashes on boot</a></li>
 <li><a href="#mmc-rebuild">Last Resort: Full on MMC rebuild guide</a></li>
 </ul>
 <h2 id="early-boot-errors">Early Boot Errors</h2>
@@ -305,7 +305,7 @@
 </ul>
 </li>
 <li>Restore a Nand backup if you have one</li>
-<li>Follow Step0, Step1, Step2 and Step3 from the <a href="#MMC-Rebuild">MMC Rebuild</a> section with the same fw version as your current fw</li>
+<li>Follow everything from the <a href="#mmc-rebuild">MMC Rebuild</a> section with the same fw version as your current fw</li>
 </ol>
 <h2 id="mid-boot-errors">Mid Boot Errors</h2>
 <ol>
@@ -316,7 +316,7 @@
 <li>Check if you have an exFAT sd. If you have, format it to fat32 </li>
 <li>Check if your system partition is mountable. This can be done via <a href="https://github.com/suchmememanyskill/TegraExplorer/releases">TegraExplorer</a></li>
 <li>Restore a Nand backup if you have one</li>
-<li>Follow everything from the <a href="#MMC-Rebuild">MMC Rebuild</a> section</li>
+<li>Follow everything from the <a href="#mmc-rebuild">MMC Rebuild</a> section</li>
 </ol>
 <h2 id="late-boot-errors">Late Boot Errors</h2>
 <ol>
@@ -327,8 +327,8 @@
 <li>Check if your USER partition is mountable. This can be done via <a href="https://github.com/suchmememanyskill/TegraExplorer/releases">TegraExplorer</a></li>
 <li>Check if your PRODINFO is fine. Decrypted prodinfo's start with <code>CAL0</code> in a hex editor</li>
 <li>Restore a Nand Backup if you have one</li>
-<li>Perform a <a href="#System-Wipe">System Wipe</a></li>
-<li>Follow everything from the <a href="#MMC-Rebuild">MMC Rebuild</a> section</li>
+<li>Perform a <a href="#system-wipe">System Wipe</a></li>
+<li>Follow everything from the <a href="#mmc-rebuild">MMC Rebuild</a> section</li>
 </ol>
 <h2 id="boot-crashes">Boot Crashes</h2>
 <ol>
@@ -337,7 +337,7 @@
 <li>If you can, your cfw setup is likely fucked</li>
 </ul>
 </li>
-<li>Perform a <a href="#System-Wipe">System Wipe</a></li>
+<li>Perform a <a href="#system-wipe">System Wipe</a></li>
 </ol>
 <h2 id="mmc-rebuild">MMC Rebuild</h2>
 <h3 id="step-0-making-a-nand-backup">Step 0: Making a nand backup</h3>
@@ -368,6 +368,12 @@
 <li>Insert your sd card in your switch and inject <code>Tegraexplorer.bin</code></li>
 <li>Navigate to SD, your folder, systemRestore.te and then <code>Launch Script</code></li>
 <li>Follow the script til completion</li>
+<li>Try to boot your switch with Atmosphere.<ul>
+<li>Note: if you followed the entirety of this guide, AutoRCM will be enabled! You need to boot via RCM</li>
+<li>If you do not have a basic Atmosphere setup on your SD, Download the atmosphere zip and fusee-primary.bin from <a href="https://github.com/Atmosphere-NX/Atmosphere/releases">here</a>. Extract the contents of the zip to the root of your sd, and inject fusee-primary.bin</li>
+<li>If your switch does not boot, perform the <a href="#system-wipe">System Wipe</a></li>
+</ul>
+</li>
 </ol>
 <h2 id="system-wipe">System Wipe</h2>
 <div class="admonition danger">
