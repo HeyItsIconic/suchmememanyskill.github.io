@@ -267,7 +267,7 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#extract-your-sysmmc-saves-via-rcm">Extract your SysMMC saves via RCM</a></li>
+        <li class="first-level active"><a href="#extract-your-user-saves-via-rcm">Extract your user saves via RCM</a></li>
             <li class="second-level"><a href="#step-1-getting-the-saves">Step 1: Getting the saves</a></li>
                 
                 <li class="third-level"><a href="#what-you-need">What you need:</a></li>
@@ -280,21 +280,23 @@
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="extract-your-sysmmc-saves-via-rcm">Extract your SysMMC saves via RCM</h1>
+<h1 id="extract-your-user-saves-via-rcm">Extract your user saves via RCM</h1>
 <h2 id="step-1-getting-the-saves">Step 1: Getting the saves</h2>
 <h3 id="what-you-need">What you need:</h3>
 <ul>
 <li>The latest release of <a href="https://github.com/suchmememanyskill/TegraExplorer/releases">TegraExplorer</a></li>
+<li><a href="https://suchmememanyskill.github.io/TegraScript/scripts/savedumper.te" download>savedumper.te</a></li>
 <li>A payload injector (Example: <a href="https://github.com/eliboa/TegraRcmGUI/releases">TegraRcmGui</a>)</li>
 </ul>
 <h3 id="instructions">Instructions:</h3>
 <ol>
+<li>Place <code>savedumper.te</code> somewhere on your sd card and insert your sd card into your switch afterwards</li>
 <li>Launch TegraExplorer via your chosen payload injector</li>
-<li>Navigate to <code>Tools</code>, and select <code>Dump User Saves</code>. This will take a while. Press any button to continue when it's done</li>
-<li>Navigate to <code>Unmount SD</code> and select it. Pull your sd card out of your switch and put it into your pc</li>
+<li>Navigate to <code>SD:/</code>, navigate to the <code>savedumper.te</code> script, select it, and select <code>Launch Script</code>. Follow the script file. When asked to pick between system and user saves, pick user. This will take a while</li>
+<li>Go back to the main menu. Navigate to <code>Unmount SD</code> and select it. Pull your sd card out of your switch and put it into your pc</li>
 </ol>
 <h2 id="step-2-extracting-the-saves">Step 2: Extracting the saves</h2>
-<p>These saves aren't done yet! these are still encrypted.</p>
+<p>These saves aren't done yet! these are still packed up.</p>
 <h3 id="what-you-need_1">What you need:</h3>
 <ul>
 <li>Your prod.keys file (Extracted by <a href="https://github.com/shchmue/Lockpick_RCM">Lockpick_RCM</a>)</li>
