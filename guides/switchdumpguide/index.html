@@ -309,10 +309,6 @@
 <p>If you experience a bug while installing gamecart based updates, contact me via discord (<code>Such Meme, Many Skill#2921</code>). This is something that's not completely understood yet.</p>
 </div>
 <hr />
-<div class="admonition danger">
-<p class="admonition-title">This only supports 9.2.0 and below</p>
-<p>Due to the loader changes in atmosphere, patching fs is no longer enough to install dumped games. As loader is a part of atmosphere, it is not pretty to patch. I've decided to <strong>not support 10.0.0+</strong></p>
-</div>
 <h1 id="cart-dump-guide">Cart dump guide</h1>
 <h2 id="step-1-preperations">Step 1: Preperations</h2>
 <p>This bit will get you the required files and programs for installing cart dumps</p>
@@ -329,7 +325,7 @@
 <li>Copy your prod.keys file to your switch folder, if you ran lockpick_rcm it will likely already be in the switch folder</li>
 <li>Copy (or replace) <code>patches.ini</code> to the bootloader folder on your sd card</li>
 <li>Replace the <code>hekate_ipl.ini</code> from the bootloader folder with the one you just downloaded<ul>
-<li>Note: if you're not using the hekate config from the nh guide, you can add <code>kip1patch=nosigchk</code> right underneath the line with <code>fss0=x</code> instead of replacing your ini</li>
+<li>Note: if you're not using the hekate config from the nh guide, you can add <code>kip1patch=nosigchk</code> (and <code>kip1patch=noldrchk</code> if you're on 10.0.0+) right underneath the line with <code>fss0=x</code> instead of replacing your ini</li>
 <li>Note: you need to be booting via hekate for this to work, fusee-primary will not work</li>
 <li>Note: If you copied these files while booted into the switch os itself you need to restart your switch for the changes to take effect</li>
 </ul>
@@ -390,7 +386,7 @@ Also, if you haven't removed your wifi networks/set up <a href="https://gitlab.c
 <p>There is quite important information about ban risk up there.
 Also, if you haven't removed your wifi networks/set up <a href="https://gitlab.com/a/90dns#usage-on-switch">90dns</a> yet, do so now</p>
 </div>
-<p>Don't forget to reboot into EmuMMC if you haven't done so already!!</p>
+<p><strong>Don't forget to reboot into EmuMMC if you haven't done so already!!</strong></p>
 <ol>
 <li>Open the Homebrew Menu and open Goldleaf</li>
 <li>Select <code>Explore content</code></li>
